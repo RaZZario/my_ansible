@@ -1,7 +1,8 @@
 ---
-- name: "Test playbook run"
-  hosts: all
+- name: Test Connections to my servers
+  hosts: all 
+  become: yes
+
   tasks:
-    - name: "Debug"
-      ansible.builtin.debug:
-        msg: "Test debug"
+  - name: Ping my servers
+    ping:
